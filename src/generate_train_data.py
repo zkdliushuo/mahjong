@@ -59,11 +59,11 @@ def pad_x(x_data):
 local_place = "/home/lius/Tenpai_prediction-master/data/"
 def save_train_data():
     x_data, y_data= generate_train_data("mjscore")
-    x_data = x_data[:50000]
-    y_data = y_data[:50000]
+    x_data = x_data[:500000]
+    y_data = y_data[:500000]
     x_data = pad_x(x_data)
-    np.save(local_place + "x_data.npy", x_data[:50000])
-    np.save(local_place + "y_data.npy", y_data[:50000])
+    np.save(local_place + "x_data.npy", x_data)
+    np.save(local_place + "y_data.npy", y_data)
 
 def generate_train_test_local():
     x_data = np.load(local_place + "x_data.npy")
